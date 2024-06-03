@@ -1,0 +1,19 @@
+<!--声明继承自那个页面-->
+{% extends "layout.html" %}
+
+<!--声明要继承自到那个代码块，必须有end-->
+{% block body %}
+<!--    注册页面-->
+    <h1>Register</h1>
+<!--    创建一个表单，用于给用户输入并提交数据("post")，（action="/greet"）属性为定义按钮的跳转地址-->
+    <form action="/greet" method="post">
+        <input name="name" type="text" placeholder="name">
+<!--        使用循环结构让接受可迭代对象sports中的所有值-->
+        {% for i in sports %}
+        <input name="sports" type="radio" value="{{ i }}" required>{{ i }}
+        {% endfor %}
+<!--        创建一个提交按钮-->
+        <button type="submit">Greet</button>
+    </form>
+
+{% endblock %}

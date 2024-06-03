@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <h1>Register</h1>
+    <tr>
+        <th>name</th>
+        <th>sport</th>
+    </tr>
+    {% for i in data %}
+    <br>
+    <tr>
+        <td>{{ i[1] }}</td>
+        <td>{{ i[2] }}</td>
+        <td>
+            <form action="/Register" method="post">
+                <button type="submit" name = "id" value="{{ i[0] }}">del</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+{% endblock %}

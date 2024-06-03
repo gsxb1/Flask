@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    {% if name %}
+        <p>您的用户名为{{ name }}</p>
+        <form action="/logout" method="POST">
+            <button name=logout type="submit" value="{{ name }}">logout</button>
+        </form>
+    {% else %}
+        <p>您好，您未完成注册</p>
+        <form action="/login" method="POST">
+            <button type="submit">login</button>
+        </form>
+    {% endif %}
+
+{% endblock %}

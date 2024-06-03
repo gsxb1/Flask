@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <ul><h1>shopping_cart</h1></ul>
+    {% for i in book %}
+    <ul>
+    {{ i[0] }} - {{ i[1] }}
+    <form action="/del_shopping_cart" method="POST">
+        <button type="submit" name="del_book" value="{{ i[0] }}">移除购物车</button>
+    </form>
+    </ul>
+    {% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父模板</title>
+</head>
+<body>
+<div><ul>
+    <li><a href="#">链接</a></li>
+    <li><a href="#">链接</a></li>
+    <li><a href="#">链接</a></li>
+</ul></div>
+
+{% block body %}
+<div><h1>我是父模板的body</h1></div>
+{% endblock %}
+<!--    画一个空的范围，让子模版去填写这个范围,也可以先预设好一个内容-->
+
+<div><h1>底部标签</h1></div>
+</body>
+</html>

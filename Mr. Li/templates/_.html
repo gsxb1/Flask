@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    1、 返回num的绝对值
+    <h4>{{num|abs}}</h4>
+    2、 返回new_list中随机一个元素
+    <h4>{{ new_list|random }}</h4>
+    3、 对new_list中数据进行排序
+    <h4>{{ new_list|sort }}</h4>
+    4、 对new_list中数据求和
+    <h4>{{ new_list|sum }}</h4>
+    5、 返回str的长度
+    <h4>{{ str|length }}</h4>
+    6、 清除str首尾空格和特殊字符
+    <h4>{{ str|new }}</h4>
+    7、  将str转换为首字母大写，其余字母小写
+    <h4>{{ str|new|capitalize }}</h4>
+    8.倒序排列
+    <h4>{{ new_list|sort(reverse=True) }}</h4>
+    9.去除字符串中的hello
+    <h4>{{ str|new|capitalize }}</h4>
+</div>
+</body>
+</html>
+

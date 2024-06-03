@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>学生信息页面</h2>
+{% macro print_error(from_fil) %}
+    {% for error_message in from_fil %}
+        <p class="error" style="color:red; display:inline;">{{error_message}}</p >
+    {% endfor %}
+{% endmacro %}
+<form method="post">
+    {{frome.csrf_token}}
+    <span>{{ frome.usename.label }}</span><br>
+    {{ frome.usename }}{{ print_error(frome.usename.errors) }}<br>
+    <span>{{ frome.nianlin.label }}</span><br>
+    {{ frome.nianlin }}{{ print_error(frome.nianlin.errors) }}<br>
+    <span>{{ frome.banji.label }}</span><br>
+    {{ frome.banji }}{{ print_error(frome.banji.errors) }}<br>
+    <span>{{ frome.lianxi.label }}</span><br>
+    {{ frome.lianxi }}{{ print_error(frome.lianxi.errors) }}<br>
+    <span>{{ frome.password.label }}</span><br>
+    {{ frome.password }}{{ print_error(frome.password.errors) }}<br>
+    <span>{{ frome.password2.label }}</span><br>
+    {{ frome.password2 }}{{ print_error(frome.password2.errors) }}<br>
+    <p>{{frome.submit}}</p >
+</form>
+</body>
+</html>

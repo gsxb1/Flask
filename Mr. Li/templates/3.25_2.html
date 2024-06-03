@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% macro input(name, valve='', type='radio') %}
+    <input name="{{ name }}" value="{{ valve }}" type="radio">
+    {% endmacro %}
+<h1>您的班级是</h1>
+    <p>{{ input("1")}}</p>一班
+    <p>{{ input("1")}}</p>二班
+    <p>{{ input("1")}}</p>三班
+
+
+</body>
+</html>

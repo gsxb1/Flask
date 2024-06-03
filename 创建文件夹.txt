@@ -1,0 +1,5 @@
+mkdir domo3
+mkdir domo3\static
+mkdir domo3\templates
+ls >  domo3\app.py
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制语句</title>
+</head>
+<body>
+{% if a == 18 %}
+    <div><h1>您的年龄为18岁</h1></div>
+{% endif %}
+<!--endif 是关键字，不可以在之间加空格-->
+
+{% for i in book %}
+    <div>{{ i.name }}</div>
+{% endfor %}
+</body>
+</html>
