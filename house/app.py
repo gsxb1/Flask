@@ -15,6 +15,8 @@ def test():
     # print(first_user)
     return f'{first_user}'
 
+def a():
+    pass
 
 if __name__ == '__main__':
     app.run(debug=True)
